@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["nejdetkadir"]
   spec.email         = ["nejdetkadir.550@gmail.com"]
 
-  spec.summary       = "Turkish cities, towns, districts and quarters collection"
+  spec.summary       = "Cities, towns, districts and quarters in Turkey"
   spec.description   = spec.summary
   spec.homepage      = "https://github.com/nejdetkadir/cities-in-turkey"
   spec.license       = "MIT"
