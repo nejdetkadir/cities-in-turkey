@@ -1,8 +1,7 @@
-# Cities::In::Turkey
+[![Gem Version](https://badge.fury.io/rb/cities-in-turkey.svg)](https://badge.fury.io/rb/cities-in-turkey)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cities/in/turkey`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# CitiesInTurkey
+Cities, towns, districts and quarters in Turkey
 
 ## Installation
 
@@ -22,23 +21,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+CitiesInTurkey.cities  # returns all cities
 
-## Development
+CitiesInTurkey.cities.sample              # returns random city in Turkey
+CitiesInTurkey.cities.sample.name         # Samsun
+CitiesInTurkey.cities.sample.alpha_2_code # TR-55
+CitiesInTurkey.cities.sample.towns        # towns of a random city as array
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+CitiesInTurkey.cities.sample.towns.sample
+# returns random town of a random city in Turkey with towns, districts and quarters as array
+CitiesInTurkey.cities.sample.towns.sample.name      # Bafra
+CitiesInTurkey.cities.sample.towns.sample.districts # returns districts of a random town as array
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+CitiesInTurkey.cities.sample.towns.sample.districts.sample
+# returns random district of a random town as array
 
-## Contributing
+CitiesInTurkey.cities.sample.towns.sample.districts.sample.name     # Köyler
+CitiesInTurkey.cities.sample.towns.sample.districts.sample.quarters
+# returns quarters of a random district as array
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cities-in-turkey. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/cities-in-turkey/blob/master/CODE_OF_CONDUCT.md).
-
-
+CitiesInTurkey.cities.sample.towns.sample.districts.sample.quarters.sample  # Kuşçular Köyü
+```
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Cities::In::Turkey project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/cities-in-turkey/blob/master/CODE_OF_CONDUCT.md).
+The gem is available as open source under the terms of the [MIT License](LICENSE.txt).
